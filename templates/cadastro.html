@@ -14,13 +14,13 @@
     <div class="logoFundo">
         <img src="../static/css/Logo_Login.png" alt="Logo">
     </div>
-    <div class="wrapper">
+     <div class="wrapper">
         <div class="form-box Register">
-            <h2>Registrar</h2>
+            <h2>Cadastre-se</h2>
             <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" name = "email" required>
+                    <input type="email" required name = "email">
                     <label>Email</label>
                 </div>
 
@@ -32,14 +32,14 @@
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="id-card-outline"></ion-icon></span>
-                    <input type="text" name = "cpf" required>
+                    <input type="text" required name = "cpf">
                     <label>CPF</label>
                 </div>
 
                 <div class="ddd-phone-container">
                     <div class="input-box-tiny">
-                        <label for="ddd-select">DDD</label>
-                        <select id="ddd-select" class="ddd-select" name="ddd">
+                        <label for="ddd-select"></label>
+                        <select id="ddd-select" class="ddd-select" name = "ddd">
                             <option value="11">11</option>
                             <option value="12">12</option>
                             <option value="13">13</option>
@@ -112,34 +112,39 @@
 
                     <div class="input-box">
                         <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
-                        <input type="text" name="telefone" required>
+                        <input type="text" required name = "telefone">
                         <label>Telefone</label>
                     </div>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" name="password" required>
+                    <input type="password" id="password" required name = "password">
                     <label>Senha</label>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" name="password2" required>
+                    <input type="password" id="confirm-password" required name = "password2">
                     <label>Confirmar Senha</label>
                 </div>
+
+                <!-- Checkbox para mostrar/ocultar senha -->
+                <div class="show-password-container">
+                    <input type="checkbox" id="show-password">
+                    <label for="show-password">Mostrar Senha</label>
+                </div>
+
                 <button type="submit" class="btn">Registrar</button>
 
                 <div class="login-register">
-                    <p>Já possui uma conta? <a href="{% url 'login' %}">Login</a></p>
+                    <p>Já possui uma conta? <a href="login.html" class="register-link">Login</a></p>
                 </div>
             </form>
         </div>
     </div>
 
-    <script src="login.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{% static 'js/register.js' %}"></script>
 </body>
 
 </html>

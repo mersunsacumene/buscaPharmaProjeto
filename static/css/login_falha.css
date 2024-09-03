@@ -58,6 +58,13 @@ body {
     text-align: center;
 }
 
+.error-message {
+    font-size: 1em;
+    color: #e41a1a;
+    font-weight: 600;
+    text-align: center;
+}
+
 .input-box {
     position: relative;
     width: 100%;
@@ -110,8 +117,7 @@ body {
     font-size: 0.9em;
     color: #162938;
     font-weight: 500;
-    margin-bottom: 15px;
-    /* Ajuste para espaçamento */
+    margin: -10px 0 30px;
     display: flex;
 }
 
@@ -124,8 +130,7 @@ body {
     font-size: 0.9em;
     color: #162938;
     font-weight: 500;
-    margin-bottom: 15px;
-    /* Ajuste para espaçamento */
+    margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
 }
