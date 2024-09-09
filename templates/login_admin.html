@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login_admin.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login Admin</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required placeholder="Digite seu Email">
+                </div>
+              
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <!-- Adicionando o ID ao campo de senha -->
+                    <input type="password" id="password" required placeholder="Digite sua Senha">
+                </div>
+
+                <div class="select" >
+                <div class="show-password-container">
+                    <input type="checkbox" id="show-password">
+                    <label for="show-password">Mostrar Senha</label>
+                </div>
+            </div>
+            <div class="login" style="font-size: larger;">
+                <button type="submit" class="btn"><b>Login</b></button>
+            </div>
+                
+            </form>
+        </div>
+    </div>
+    <script src="javaScript/login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
